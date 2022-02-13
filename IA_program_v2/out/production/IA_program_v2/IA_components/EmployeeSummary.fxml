@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="550.0" prefWidth="860.0" style="-fx-background-color: linear-gradient( to bottom,  #5a5c6a 0%, #202d3a 81.3% )" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA_components.EmployeeSummaryController">
+    <children>
+        <VBox alignment="CENTER_RIGHT" layoutX="72.0" layoutY="77.0" prefHeight="288.0" prefWidth="174.0" spacing="30.0">
+            <children>
+                <Label minHeight="30.0" minWidth="50.0" prefHeight="23.0" prefWidth="165.0" text="Total monthly  pay: " textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label minHeight="30.0" minWidth="50.0" prefHeight="23.0" prefWidth="131.0" text="Average salary:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label minHeight="30.0" minWidth="50.0" prefHeight="23.0" prefWidth="148.0" text="Total employees: " textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label minHeight="30.0" minWidth="50.0" prefHeight="24.0" prefWidth="64.0" text="Males:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label minHeight="30.0" minWidth="50.0" prefHeight="25.0" prefWidth="81.0" text="Females:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+            </children>
+        </VBox>
+        <VBox layoutX="246.0" layoutY="89.0" prefHeight="263.0" prefWidth="174.0" spacing="30.0">
+            <children>
+                <Label fx:id="TotSal" minHeight="30.0" minWidth="50.0" prefHeight="100.0" prefWidth="150.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label fx:id="avSal" minHeight="30.0" minWidth="50.0" prefHeight="59.0" prefWidth="148.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label fx:id="totEmp" minHeight="30.0" minWidth="50.0" prefHeight="100.0" prefWidth="150.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label fx:id="totMale" minHeight="30.0" minWidth="50.0" prefHeight="100.0" prefWidth="150.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label fx:id="totFem" minHeight="30.0" minWidth="50.0" prefHeight="31.0" prefWidth="148.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+            </children>
+        </VBox>
+        <AnchorPane layoutX="430.0" layoutY="14.0" prefHeight="520.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #f5e15a; -fx-border-radius: 15;">
+            <children>
+                <PieChart fx:id="FX_pie" layoutX="47.0" layoutY="14.0" prefHeight="211.0" prefWidth="351.0" title="Job distribution" />
+                <Label fx:id="FX_pieSelect" layoutX="175.0" layoutY="225.0" prefHeight="35.0" prefWidth="130.0" />
+                <BarChart fx:id="FX_bar" layoutX="27.0" layoutY="284.0" prefHeight="222.0" prefWidth="385.0" title="Branch salary distribution">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BarChart>
+            <Label fx:id="FX_barSelect" layoutX="153.0" layoutY="416.0" prefHeight="25.0" prefWidth="56.0" />
+            </children>
+        </AnchorPane>
+        <Button fx:id="FX_return" layoutX="197.0" layoutY="465.0" mnemonicParsing="false" onAction="#menuReturn" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="Return to menu" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></Button>
+      <Button fx:id="FX_return1" layoutX="224.0" layoutY="409.0" mnemonicParsing="false" onAction="#Refresh" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></Button>
+      <VBox layoutY="1.0" prefHeight="550.0" prefWidth="56.0" style="-fx-background-color: #f5e15a;" />
+      <Label layoutX="197.0" layoutY="31.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="Employee summary" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+weather.Weather.Main-Class: IA_components.Main
+

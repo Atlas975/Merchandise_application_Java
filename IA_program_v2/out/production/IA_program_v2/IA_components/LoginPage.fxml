@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="435.0" style="-fx-background-color:  linear-gradient( to bottom,  #5a5c6a 0%, #202d3a 81.3% )" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA_components.LoginController">
+
+    <children>
+      <AnchorPane fx:id="LogPane" layoutX="91.0" layoutY="100.0" prefHeight="250.0" prefWidth="280.0">
+         <children>
+              <PasswordField fx:id="txtPass" layoutX="50.0" layoutY="133.0" prefHeight="50.0" prefWidth="180.0" promptText="Password" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font size="16.0" />
+               </font></PasswordField>
+              <TextField fx:id="txtUser" layoutX="50.0" layoutY="68.0" prefHeight="50.0" prefWidth="180.0" promptText="User ID" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+              <Button fx:id="txtLogin" layoutX="106.0" layoutY="212.0" minWidth="53.0" mnemonicParsing="false" onAction="#Login" prefHeight="38.0" prefWidth="68.0" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="Enter" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Label layoutX="68.0" layoutY="25.0" prefHeight="30.0" prefWidth="144.0" style="-fx-text-fill: White;" text="Welcome back!">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+         </children></AnchorPane>
+      <HBox layoutX="55.0" layoutY="36.0" prefHeight="55.0" prefWidth="380.0" spacing="15.0">
+         <children>
+            <Button fx:id="Action_log" mnemonicParsing="false" onAction="#LoginShow" prefHeight="60.0" prefWidth="170.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #30CF3C; -fx-background-color: transparent;" text="Login" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="Action_create" mnemonicParsing="false" onAction="#AuthShow" prefHeight="60.0" prefWidth="170.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #f4333c; -fx-background-color: transparent;" text="Register" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="SignPane" layoutX="111.0" layoutY="100.0" prefHeight="272.0" prefWidth="240.0" visible="false">
+         <children>
+            <PasswordField fx:id="txtnPass" layoutX="44.0" layoutY="145.0" promptText="Password" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font size="16.0" />
+               </font></PasswordField>
+            <ComboBox fx:id="txtJob" layoutX="45.0" layoutY="41.0" prefWidth="150.0" promptText="Job title" style="-fx-background-color: grey; -fx-border-color: grey;" />
+            <TextField fx:id="txtnUser" layoutX="44.0" layoutY="95.0" promptText="User ID" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <Button fx:id="txtnEnter" layoutX="84.0" layoutY="208.0" mnemonicParsing="false" onAction="#AddUser" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="Enter" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AuthPane" layoutX="80.0" layoutY="148.0" prefHeight="189.0" prefWidth="302.0" visible="false">
+         <children>
+            <Label layoutX="24.0" layoutY="30.0" prefHeight="18.0" prefWidth="273.0" text="Enter manager password for permission:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font></Label>
+            <PasswordField fx:id="AuthPass" layoutX="72.0" layoutY="80.0" promptText="Password" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font size="15.0" />
+               </font></PasswordField>
+            <Button fx:id="AuthCheck" layoutX="117.0" layoutY="137.0" mnemonicParsing="false" onAction="#AddUser" prefHeight="38.0" prefWidth="68.0" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="Enter" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="FX_exit" layoutX="365.0" layoutY="356.0" minHeight="18.0" minWidth="53.0" mnemonicParsing="false" onAction="#Exit" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="Exit" textFill="WHITE" />
+      <VBox prefHeight="400.0" prefWidth="31.0" style="-fx-background-color: #f5e15a;" />
+      <ImageView fitHeight="108.0" fitWidth="77.0" layoutX="42.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/Saved%20Pictures/Capture.PNG" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

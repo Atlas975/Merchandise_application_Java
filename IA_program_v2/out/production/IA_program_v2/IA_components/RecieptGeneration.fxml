@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="790.0" prefWidth="1110.0" style="-fx-background-color:   linear-gradient( to bottom,  #5a5c6a 0%, #202d3a 81.3% )" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA_components.RecieptCOntroller">
+    <children>
+        <TableView fx:id="ProductTable" layoutX="76.0" layoutY="46.0" onMouseClicked="#getSelected" prefHeight="308.0" prefWidth="1010.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="46.0">
+            <columns>
+                <TableColumn fx:id="FX_prodCode" minWidth="130.0" prefWidth="137.9999942779541" text="Product code" />
+                <TableColumn fx:id="FX_name" minWidth="130.0" prefWidth="122.00001525878906" text="Item" />
+                <TableColumn fx:id="FX_perish" prefWidth="75.0" text="Perishable" />
+                <TableColumn fx:id="FX_branch" prefWidth="75.0" text="Branch" />
+                <TableColumn fx:id="FX_type" minWidth="130.0" prefWidth="130.0" text="Item category" />
+                <TableColumn fx:id="FX_supply" minWidth="130.0" prefWidth="126.0" text="Supplier" />
+                <TableColumn fx:id="FX_contact" prefWidth="180.0" text="Supplier contact" />
+                <TableColumn fx:id="FX_price" prefWidth="75.0" text="Price (AED)" />
+                <TableColumn fx:id="FX_quan" prefWidth="75.0" text="Quantity" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER" layoutX="192.0" layoutY="694.0" prefHeight="38.0" prefWidth="350.0" spacing="10.0">
+         <children>
+              <Button fx:id="FX_refresh" mnemonicParsing="false" onAction="#tableControl" prefHeight="36.0" prefWidth="145.0" style="-fx-border-color: 0; -fx-background-color: transparent; -fx-border-radius: 15;" text=" Refresh page" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Button>
+              <Button fx:id="FX_return" mnemonicParsing="false" onAction="#menuReturn" prefHeight="36.0" prefWidth="149.0" style="-fx-border-color: 0; -fx-background-color: transparent; -fx-border-radius: 15;" text="Return to menu" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Button>
+         </children>
+        </HBox>
+        <VBox alignment="CENTER_RIGHT" layoutX="153.0" layoutY="419.0" prefHeight="164.0" prefWidth="221.0" spacing="30.0">
+            <children>
+                <Label maxHeight="30.0" maxWidth="117.0" minHeight="30.0" minWidth="70.0" prefHeight="30.0" prefWidth="70.0" text="Product code:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label maxHeight="30.0" maxWidth="45.0" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" text="Item:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+                <Label maxHeight="22.0" maxWidth="80.0" minHeight="30.0" minWidth="0.0" prefHeight="22.0" prefWidth="69.0" text="Quantity:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+            </children>
+            <padding>
+                <Insets left="30.0" />
+            </padding>
+        </VBox>
+        <VBox layoutX="388.0" layoutY="426.0" prefHeight="144.0" prefWidth="139.0" spacing="30.0">
+            <children>
+                <TextField fx:id="FX_addCode" maxHeight="30.0" maxWidth="125.0" minHeight="30.0" minWidth="100.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></TextField>
+                <TextField fx:id="FX_addItem" maxHeight="30.0" maxWidth="123.0" minHeight="30.0" minWidth="100.0" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></TextField>
+                <TextField fx:id="FX_addQuan" maxHeight="30.0" maxWidth="123.0" minHeight="30.0" minWidth="100.0" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></TextField>
+            </children>
+        </VBox>
+        <TextField fx:id="tableFilter" layoutX="545.0" layoutY="8.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></TextField>
+        <Label layoutX="452.0" layoutY="10.0" text="Search by:" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></Label>
+      <TableView fx:id="FX_Bill" layoutX="653.0" layoutY="367.0" onMouseClicked="#getBill" prefHeight="290.0" prefWidth="391.0">
+        <columns>
+            <TableColumn fx:id="FX_BillCode" minWidth="130.0" prefWidth="96.66668701171875" style="-fx-background-color: transparent;" text="Product code" />
+          <TableColumn fx:id="FX_BillItem" minWidth="130.0" prefWidth="79.333251953125" style="-fx-background-color: transparent;" text="Item" />
+          <TableColumn fx:id="FX_BillQuantity" minWidth="130.0" prefWidth="98.6666259765625" style="-fx-background-color: transparent;" text="Quantity" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="752.0" layoutY="661.0" prefHeight="38.0" prefWidth="228.0" spacing="10.0">
+         <children>
+            <Label text="Total bill:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label fx:id="FX_total" prefHeight="17.0" prefWidth="105.0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <Button fx:id="FX_PDF" layoutX="789.0" layoutY="714.0" mnemonicParsing="false" onAction="#ReportMaker" prefHeight="36.0" prefWidth="120.0" style="-fx-border-color: #f5e15a; -fx-background-color: #696774; -fx-border-radius: 15; -fx-background-radius: 15;" text="Download PDF" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font></Button>
+      <HBox layoutX="186.0" layoutY="634.0" prefHeight="46.0" prefWidth="391.0" spacing="15.0">
+         <children>
+                <Button fx:id="FX_Add" mnemonicParsing="false" onAction="#Add" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #30CF3C; -fx-background-color: #30CF3C; -fx-background-radius: 15; -fx-border-radius: 15;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Button>
+                <Button fx:id="FX_delete" mnemonicParsing="false" onAction="#Delete" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #F5C00A; -fx-background-color: #F5C00A; -fx-background-radius: 15; -fx-border-radius: 15;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Button>
+            <Button fx:id="FX_Clear" mnemonicParsing="false" onAction="#Wipe" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #f4333c; -fx-background-color: #f4333c; -fx-border-radius: 15; -fx-background-radius: 15;" text="Clear reciept" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <VBox prefHeight="790.0" prefWidth="55.0" style="-fx-background-color: #f5e15a;" />
+    </children>
+</AnchorPane>

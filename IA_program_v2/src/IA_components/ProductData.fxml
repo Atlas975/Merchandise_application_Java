@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="768.0" prefWidth="1110.0" style="-fx-background-color:  linear-gradient( to bottom,  #5a5c6a 0%, #202d3a 81.3% )" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA_components.ProductDataController">
+    <children>
+        <TableView fx:id="ProductTable" layoutX="79.0" layoutY="57.0" onMouseClicked="#getSelected" prefHeight="308.0" prefWidth="998.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="57.0">
+            <columns>
+                <TableColumn fx:id="FX_prodCode" prefWidth="137.9999942779541" text="Product code" />
+                <TableColumn fx:id="FX_name" prefWidth="122.00001525878906" text="Item" />
+                <TableColumn fx:id="FX_perish" prefWidth="75.0" text="Perishable" />
+                <TableColumn fx:id="FX_branch" prefWidth="75.0" text="Branch" />
+                <TableColumn fx:id="FX_type" prefWidth="130.0" text="Item category" />
+                <TableColumn fx:id="FX_supply" prefWidth="126.0" text="Supplier" />
+                <TableColumn fx:id="FX_contact" prefWidth="180.0" text="Supplier contact" />
+                <TableColumn fx:id="FX_price" prefWidth="75.0" text="Price (AED)" />
+                <TableColumn fx:id="FX_quan" prefWidth="75.0" text="Quantity" />
+            </columns>
+        </TableView>
+        <Label layoutX="361.0" layoutY="382.0" prefHeight="18.0" prefWidth="249.0" text="Enter all product details to add a product to the record" textFill="WHITE">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+      <VBox alignment="CENTER_RIGHT" layoutX="55.0" layoutY="425.0" prefHeight="120.0" prefWidth="163.0" spacing="30.0">
+         <children>
+            <Label minHeight="20.0" minWidth="50.0" prefHeight="20.0" prefWidth="107.0" text="Product code:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="62.0" text="Branch:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="129.0" text="Supplier contact:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="228.0" layoutY="415.0" prefHeight="100.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <TextField fx:id="FX_addCode" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+            <TextField fx:id="FX_addBranch" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+            <TextField fx:id="FX_addContact" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutX="318.0" layoutY="425.0" prefHeight="100.0" prefWidth="107.0" spacing="30.0">
+         <children>
+            <Label minHeight="20.0" minWidth="30.0" prefHeight="25.0" prefWidth="46.0" text="Item:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="76.0" text="Category:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label minHeight="20.0" minWidth="48.0" prefHeight="25.0" prefWidth="48.0" text="Price:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="443.0" layoutY="415.0" prefHeight="100.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <TextField fx:id="FX_addItem" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+            <TextField fx:id="FX_addType" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+            <TextField fx:id="FX_addPrice" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutX="561.0" layoutY="420.0" prefHeight="100.0" prefWidth="120.0" spacing="30.0">
+         <children>
+            <Label minHeight="20.0" minWidth="50.0" text="Perishable:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="67.0" text="Supplier:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+            <Label minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="73.0" text="Quantity:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="701.0" layoutY="415.0" minHeight="20.0" minWidth="50.0" prefHeight="100.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="FX_addPerish" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="True" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font></RadioButton>
+            <TextField fx:id="FX_addSupply" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+            <TextField fx:id="FX_addQuan" minHeight="30.0" minWidth="20.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: Transparent; -fx-border-color: #f5e15a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="828.0" layoutY="391.0" prefHeight="357.0" prefWidth="249.0" spacing="10.0" style="-fx-border-color: #f5e15a;">
+         <children>
+            <Label text="Email supplier" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="186.0" text="Enter the following details&#10;to email supplier for restock&#10;" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font></Label>
+            <TextField fx:id="mailItem" maxWidth="180.0" prefHeight="25.0" prefWidth="213.0" promptText="Item">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="mailContact" maxWidth="180.0" prefHeight="25.0" prefWidth="231.0" promptText="Supplier email">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font></TextField>
+            <Label text="Quantity needed:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+            <Slider fx:id="mailSlider" maxWidth="187.0" prefHeight="37.0" prefWidth="166.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: white;" />
+            <Button mnemonicParsing="false" onAction="#sendEmail" prefHeight="35.0" prefWidth="64.0" style="-fx-border-color: #f5e15a; -fx-background-color: #696774; -fx-border-radius: 15; -fx-background-radius: 15;" text="Send" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <TextField fx:id="tableFilter" layoutX="543.0" layoutY="19.0" prefHeight="30.0" prefWidth="163.0">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></TextField>
+      <Label layoutX="466.0" layoutY="25.0" text="Search by:" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></Label>
+      <VBox prefHeight="790.0" prefWidth="55.0" style="-fx-background-color: #f5e15a;" />
+      <HBox layoutX="272.0" layoutY="622.0" prefHeight="46.0" prefWidth="391.0" spacing="15.0">
+         <children>
+            <Button fx:id="FX_Add" mnemonicParsing="false" onAction="#Add" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #30CF3C; -fx-background-color: #30CF3C; -fx-background-radius: 15; -fx-border-radius: 15;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="FX_update" mnemonicParsing="false" onAction="#Update" prefHeight="46.0" prefWidth="123.0" style="-fx-border-color: #F5C00A; -fx-background-color: #F5C00A; -fx-background-radius: 15; -fx-border-radius: 15;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="FX_delete" mnemonicParsing="false" onAction="#Delete" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #f4333c; -fx-background-color: #f4333c; -fx-border-radius: 15; -fx-background-radius: 15;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="FX_return" layoutX="468.0" layoutY="700.0" mnemonicParsing="false" onAction="#menuReturn" prefHeight="36.0" prefWidth="149.0" style="-fx-border-color: 0; -fx-background-color: transparent; -fx-border-radius: 15;" text="Return to menu" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_refresh" layoutX="316.0" layoutY="700.0" mnemonicParsing="false" onAction="#tableControl" prefHeight="36.0" prefWidth="149.0" style="-fx-border-color: 0; -fx-background-color: transparent; -fx-border-radius: 15;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_calc" layoutX="715.0" layoutY="18.0" mnemonicParsing="false" onAction="#Calculator" prefHeight="20.0" prefWidth="51.0" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="+ / -" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="675.0" prefWidth="980.0" style="-fx-background-color: linear-gradient( to bottom,  #5a5c6a 0%, #202d3a 81.3% );" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA_components.EmployeeDataController">
+   <children>
+      <TableView fx:id="EmployeeTable" layoutX="71.0" layoutY="47.0" onMouseClicked="#getSelected" prefHeight="335.0" prefWidth="897.0" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="47.0">
+        <columns>
+          <TableColumn fx:id="FX_empID" prefWidth="84.0" text="Employee ID" />
+          <TableColumn fx:id="FX_firstName" prefWidth="115.99996948242188" text="First name" />
+            <TableColumn fx:id="FX_lastName" prefWidth="100.0" text="Last name" />
+            <TableColumn fx:id="FX_joinDate" prefWidth="100.0" text="Join date" />
+            <TableColumn fx:id="FX_gender" prefWidth="100.0" text="Gender" />
+            <TableColumn fx:id="FX_jobTitle" prefWidth="100.0" text="Job title" />
+            <TableColumn fx:id="FX_salary" prefWidth="100.0" text="Salary (AED)" />
+            <TableColumn fx:id="FX_superID" prefWidth="100.0" text="Supervisor ID" />
+            <TableColumn fx:id="FX_branchID" prefWidth="100.0" text="Branch ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="274.0" layoutY="390.0" prefHeight="18.0" prefWidth="325.0" text="Enter all employee details to add an employee to the record" textFill="WHITE" />
+      <TextField fx:id="tableFilter" layoutX="499.0" layoutY="12.0" minHeight="30.0" minWidth="150.0" prefHeight="18.0" prefWidth="0.0">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></TextField>
+      <Label layoutX="422.0" layoutY="18.0" text="Search by:" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font></Label>
+      <VBox layoutY="-4.0" prefHeight="681.0" prefWidth="55.0" style="-fx-background-color: #f5e15a;" />
+      <HBox layoutX="89.0" layoutY="424.0" prefHeight="211.0" prefWidth="632.0" spacing="50.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="130.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="112.0" text="Employee ID:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="95.0" text="First name:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="93.0" text="Last name:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="83.0" text="Join date:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="73.0" text="Gender:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="211.0" prefWidth="120.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="FX_addID" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <TextField fx:id="FX_addFirst" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <TextField fx:id="FX_addLast" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <DatePicker fx:id="FX_addDate" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" prefHeight="25.0" prefWidth="149.0" />
+                  <TextField fx:id="FX_addSex" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="197.0" prefWidth="132.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="73.0" text="Job title:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="119.0" text="Salary: " textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="116.0" text="Supervisor ID:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="87.0" text="Branch ID:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="146.0" text="User password:" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="211.0" prefWidth="120.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="FX_addTitle" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <TextField fx:id="FX_addSalary" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <TextField fx:id="FX_addSuper" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <TextField fx:id="FX_addbranch" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+                  <TextField fx:id="FX_addPass" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="40.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="FX_AddUsr" layoutX="793.0" layoutY="424.0" mnemonicParsing="false" onAction="#Add" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #30CF3C; -fx-background-color: #30CF3C; -fx-background-radius: 15; -fx-border-radius: 15;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_update" layoutX="793.0" layoutY="477.0" mnemonicParsing="false" onAction="#Update" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #F5C00A; -fx-background-color: #F5C00A; -fx-background-radius: 15; -fx-border-radius: 15;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_delete" layoutX="793.0" layoutY="530.0" mnemonicParsing="false" onAction="#Delete" prefHeight="46.0" prefWidth="120.0" style="-fx-border-color: #f4333c; -fx-background-color: #f4333c; -fx-border-radius: 15; -fx-background-radius: 15;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_refresh" layoutX="751.0" layoutY="599.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="36.0" prefWidth="83.0" style="-fx-border-color: 0; -fx-background-color: transparent; -fx-border-radius: 15;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_return" layoutX="833.0" layoutY="599.0" mnemonicParsing="false" onAction="#menuReturn" prefHeight="36.0" prefWidth="144.0" style="-fx-border-color: 0; -fx-background-color: transparent; -fx-border-radius: 15;" text="Return to menu" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX_calc" layoutX="677.0" layoutY="11.0" mnemonicParsing="false" onAction="#Calculator" style="-fx-background-color: transparent; -fx-border-color: #f5e15a;" text="+ / -" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

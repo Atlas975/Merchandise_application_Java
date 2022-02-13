@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="360.0" style="-fx-background-color: linear-gradient( to bottom,  #5a5c6a 0%, #202d3a 81.3% );" styleClass="-" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA_components.CalculatorController">
+   <children>
+      <Button fx:id="FX1" layoutY="108.0" mnemonicParsing="false" onAction="#one" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="1" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX2" layoutX="90.0" layoutY="108.0" mnemonicParsing="false" onAction="#two" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="2" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX3" layoutX="180.0" layoutY="108.0" mnemonicParsing="false" onAction="#three" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="3" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FXPlus" layoutX="270.0" layoutY="108.0" mnemonicParsing="false" onAction="#plus" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="+" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX4" layoutY="178.0" mnemonicParsing="false" onAction="#four" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="4" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX5" layoutX="90.0" layoutY="178.0" mnemonicParsing="false" onAction="#five" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="5" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX6" layoutX="180.0" layoutY="178.0" mnemonicParsing="false" onAction="#six" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="6" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FXMinus" layoutX="270.0" layoutY="178.0" mnemonicParsing="false" onAction="#minus" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="-" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX7" layoutY="248.0" mnemonicParsing="false" onAction="#seven" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="7" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX8" layoutX="90.0" layoutY="248.0" mnemonicParsing="false" onAction="#eight" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="8" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX9" layoutX="180.0" layoutY="248.0" mnemonicParsing="false" onAction="#nine" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="9" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FXTimes" layoutX="270.0" layoutY="248.0" mnemonicParsing="false" onAction="#multiply" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="x" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FX0" layoutY="318.0" mnemonicParsing="false" onAction="#zero" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="0" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FXEqual" layoutX="90.0" layoutY="318.0" mnemonicParsing="false" onAction="#equal" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="=" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FXClear" layoutX="180.0" layoutY="318.0" mnemonicParsing="false" onAction="#clear" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="CL" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="FXDivide" layoutX="270.0" layoutY="318.0" mnemonicParsing="false" onAction="#divide" onMouseClicked="#Click" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="÷" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="109.0" prefWidth="360.0" style="-fx-background-color: #c9ccd1;">
+         <children>
+            <Label fx:id="working" layoutX="32.0" prefHeight="51.0" prefWidth="314.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="result" layoutX="211.0" layoutY="55.0" prefHeight="51.0" prefWidth="144.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
